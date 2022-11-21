@@ -22,7 +22,7 @@ func main() {
 	}
 
 	//Задаем службу для прослушивания порта
-	listener, err := net.Listen("tcp", fmt.Sprintf("0.0.0.0:%s", port))
+	listener, err := net.Listen("tcp", fmt.Sprintf(":%s", port))
 	if err != nil {
 		logging.Ent.WithFields(logrus.Fields{"error": err}).Error("error listening server")
 		log.Fatal(err)
